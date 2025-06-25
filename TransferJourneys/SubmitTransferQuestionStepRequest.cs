@@ -1,0 +1,26 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WTW.MdpService.TransferJourneys;
+
+public record SubmitTransferQuestionStepRequest
+{
+    [Required]
+    [MinLength(2)]
+    [MaxLength(25)]
+    public string CurrentPageKey { get; init; }
+
+    [Required]
+    [MinLength(2)]
+    [MaxLength(25)]
+    public string NextPageKey { get; init; }
+
+    [Required]
+    [MinLength(2)]
+    [MaxLength(25)]
+    public string QuestionKey { get; init; }
+
+    [Required]
+    [MinLength(2)]
+    [MaxLength(25)]
+    public string AnswerKey { get; init; }
+}
